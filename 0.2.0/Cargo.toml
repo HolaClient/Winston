@@ -1,0 +1,16 @@
+[package]
+name = "hcw"
+version = "0.1.0"
+
+[lib]
+name = "hcw"
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+napi = "2.12"
+napi-derive = "2.12"
+libc = "0.2"
+
+[build-dependencies]
+napi-build = "2.0"
+cc = "1.0"

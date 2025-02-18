@@ -1,0 +1,24 @@
+[package]
+name = "hcw"
+version = "0.1.0"
+
+[lib]
+name = "hcw"
+crate-type = ["cdylib"]
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+
+[dependencies]
+napi = { version = "2.12", features = ["async"] }
+napi-derive = "2.12"
+tokio = { version = "1.0", default-features = false, features = [
+    "rt-multi-thread",
+    "net",
+    "time",
+    "macros",
+    "io-util"
+] }
+anyhow = { version = "1.0", default-features = false }

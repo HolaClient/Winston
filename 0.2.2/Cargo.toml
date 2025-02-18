@@ -1,0 +1,16 @@
+[package]
+name = "hcw"
+version = "0.1.0"
+
+[lib]
+name = "hcw"
+crate-type = ["cdylib"]
+
+[dependencies]
+napi = { version = "2.12", features = ["async"] }
+napi-derive = "2.12"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3

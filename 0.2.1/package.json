@@ -1,0 +1,11 @@
+{
+  "name": "hcw",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "bash ./build.sh"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2.16.3"
+  }
+}
